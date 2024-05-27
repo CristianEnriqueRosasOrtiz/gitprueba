@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <style>
+        [v-cloak]> *{display : none}
+        [v-cloak]::before{
+            content: "";
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            background-image: url("https://iconos8.es/icon/qQPIsy1hQH3r/dots-loading");
+
+        }
+    </style>
+    <div id="app" v-cloak>
+         <h1>{{mensaje}}</h1> <!--al estar ocupando la sintaxis doble llave le decimos que estamos ocupado VUE -->
+    </div>
+    <button onclick="loadFuction()">Cargar App</button>
+    <script>
+     function loadFuction()
+     {
+        var myApp=new Vue({
+        el:"#app",
+        data:{
+            mensaje:"Bienvenidos a todos"
+
+        }
+
+    });
+     }
+    
+    </script>
+</body>
+</html>

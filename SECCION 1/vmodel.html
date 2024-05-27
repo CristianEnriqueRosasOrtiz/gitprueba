@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="jumbotron"> 
+            <h1 v-once>
+                {{mensaje}}  
+            </h1>
+        <hr>      
+        </div>
+         <h1>{{mensaje}}</h1> <!--al estar ocupando la sintaxis doble llave le decimos que estamos ocupado VUE -->
+         <input class="form-control" type="text" v-model="mensaje">
+        <div v-bind:class="secondary" role="alert">
+            A simple danger alert—check it out!
+        </div>  
+
+    </div>
+    <script>
+    var myApp=new Vue({
+        el:"#app",
+        data:{
+            mensaje:"Hola mundo desde Vue",
+            primary: "alert alert-primary",
+            secondary: "alert alert-secondary" 
+        }
+
+    });
+    </script>
+</body>
+</html> 

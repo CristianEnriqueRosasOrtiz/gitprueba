@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directiva V-for</title>
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Lista de temas para estudiar</h1>
+                <hr>
+                <ul class="list-group">
+                    <li class="list-group-item" v-for="elemento in lista">{{elemento}}</li>
+                    
+                </ul>
+
+                <hr>
+
+                <ul class="list-group">
+                    <li class="list-group-item" v-for="persona in personas">{{persona.nombre}}</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var myApp = new Vue({
+        el:"#app",
+        data:{
+        lista:["HTML5","CSS3","Vue JS","Angular","React JS"],
+        personas:[
+        {nombre:"Cristian",edad:21},
+        {nombre:"Miguel",edad:25},
+        {nombre:"Genaro",edad:24},
+        {nombre:"Mabel",edad:23}
+        ]
+        
+        }
+    })
+</script>
+</html>
